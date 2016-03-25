@@ -5,6 +5,7 @@
   "scripts": {
     "postinstall": "echo 'let cppo_version = \"1.3.1\"' > cppo_version.ml && ocamlyacc cppo_parser.mly && ocamllex cppo_lexer.mll && ocamlc -o cppo -dtypes unix.cma str.cma cppo_version.ml cppo_types.ml cppo_parser.mli cppo_parser.ml cppo_lexer.ml cppo_command.ml cppo_eval.ml cppo_main.ml"
   },
+  "main": "./exportCppo.js",
   "dependencies": {
     "CommonML": "git://github.com/jordwalke/CommonML.git"
   },
