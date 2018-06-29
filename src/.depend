@@ -1,0 +1,14 @@
+cppo_version.cmx : cppo_version.cmi
+cppo_types.cmx : cppo_types.cmi
+cppo_command.cmx : cppo_command.cmi
+cppo_lexer.cmx : cppo_types.cmx cppo_parser.cmx
+cppo_parser.cmx : cppo_types.cmx cppo_parser.cmi
+cppo_eval.cmx : cppo_types.cmx cppo_parser.cmx cppo_lexer.cmx \
+    cppo_command.cmx cppo_eval.cmi
+cppo_main.cmx : cppo_version.cmx cppo_types.cmx cppo_eval.cmx \
+    cppo_command.cmx
+cppo_version.cmi :
+cppo_types.cmi :
+cppo_command.cmi :
+cppo_parser.cmi : cppo_types.cmi
+cppo_eval.cmi : cppo_types.cmi cppo_command.cmi

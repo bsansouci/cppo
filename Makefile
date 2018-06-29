@@ -1,18 +1,5 @@
 all:
-	@jbuilder build @install @DEFAULT
-
-test:
-	@jbuilder runtest
-
-install:
-	@jbuilder install
-
-uninstall:
-	@jbuilder uninstall
-
-check: test
-
-.PHONY: clean all check test install uninstall
+	make -j 9 -C src
 
 clean:
-	jbuilder clean
+	make -C src clean
